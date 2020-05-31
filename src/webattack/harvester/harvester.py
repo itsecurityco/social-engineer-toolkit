@@ -412,7 +412,7 @@ class SETHandler(BaseHTTPRequestHandler):
                 else:
                     line = ""
                 counter = 1
-            filewrite.write(cgi.escape("PARAM: " + line + "\n"))
+            filewrite.write(cgi.html.escape("PARAM: " + line + "\n"))
             filewrite2.write(line + "\n")
             # if a counter hits at 0 then print this line
             if counter == 0:
